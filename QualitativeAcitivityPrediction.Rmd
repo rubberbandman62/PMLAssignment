@@ -1,6 +1,6 @@
 ---
 title: "Qualitative Activity Prediction"
-author: "Hartwig Tödter"
+author: "Hartwig TÃ¶dter"
 date: "Saturday, February 27, 2016"
 output: html_document
 ---
@@ -87,8 +87,8 @@ Let's see how it performs.
 
 ```{r}
 ctrl <- trainControl(method="cv", number=5, allowParallel=TRUE)
-# rfmodel <- train(classe~., data=training.train, method="rf", prox=TRUE, trControl=ctrl)
-rfmodel
+rfmodel <- train(classe~., data=training.train, method="gbm", verbose=FALSE,
+                 trControl=ctrl)
 rfmodel$finalModel
 rfmodel$results
 ```
